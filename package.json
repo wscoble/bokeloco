@@ -1,0 +1,22 @@
+{
+  "name": "bokeloco",
+  "version": "1.0.0",
+  "description": "The bokeloco.com web site",
+  "main": "index.js",
+  "scripts": {
+    "test": "gulp test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/wscoble/bokeloco.git"
+  },
+  "author": "Scott Scoble <scott@scoble.tech>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/wscoble/bokeloco/issues"
+  },
+  "homepage": "https://github.com/wscoble/bokeloco#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
