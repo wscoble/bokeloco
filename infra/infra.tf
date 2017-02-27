@@ -184,3 +184,18 @@ resource "aws_route53_record" "dkim3" {
   ttl = "5"
   records = ["3lo7j7iyop6vuhwx4u5aw5yisubaz3jk.dkim.amazonses.com."]
 }
+
+#### Git Repository ####
+
+resource "aws_codecommit_repository" "bokeloco" {
+  repository_name = "BokeLoco"
+  description = "BokeLoco.com application repository"
+}
+
+output "git ssh origin" {
+  value = "${aws_codecommit_repository.bokeloco.clone_url_ssh}"
+}
+
+output "git https origin" {
+  value = "${aws_codecommit_repository.bokeloco.clone_url_http}"
+}
