@@ -1,14 +1,30 @@
 {
-  "name": "bokeloco",
-  "version": "1.0.0",
-  "description": "bokeloco.com web site",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "name": "web",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "amazon-cognito-identity-js": "^1.16.0",
+    "amazon-cognito-js": "^1.1.0",
+    "aws-sdk": "^2.22.0",
+    "aws-sdk-mobile-analytics": "^0.9.2",
+    "fastmatter": "^1.1.1",
+    "marked": "^0.3.6",
+    "material-ui": "^0.17.0",
+    "react": "15.4.2",
+    "react-dom": "15.4.2",
+    "react-grid-layout": "^0.14.3",
+    "react-router": "^3.0.2",
+    "react-tap-event-plugin": "^2.0.1",
+    "signals": "^1.0.0",
+    "universal-analytics": "^0.4.10"
   },
-  "author": "",
-  "license": "ISC",
   "devDependencies": {
-    "gulp": "^3.9.1"
+    "react-scripts": "0.9.2"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
   }
 }

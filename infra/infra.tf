@@ -199,3 +199,13 @@ output "git ssh origin" {
 output "git https origin" {
   value = "${aws_codecommit_repository.bokeloco.clone_url_http}"
 }
+
+#### Docker Build Container ####
+
+resource "aws_ecr_repository" "bokeloco" {
+  name = "bokeloco"
+}
+
+output "bokeloco docker repository url" {
+  value = "${aws_ecr_repository.bokeloco.repository_url}"
+}
