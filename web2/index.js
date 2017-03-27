@@ -8,4 +8,4 @@ import Elm from './src/App.elm'
 
 const mountNode = document.getElementById('main')
 
-const app = Elm.Main.embed(mountNode)
+const app = Elm.App.embed(mountNode)
