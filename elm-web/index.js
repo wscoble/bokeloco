@@ -13,14 +13,17 @@ var app = Elm.App.embed(mountNode);
 app.ports.updateLocation.subscribe(function(location) {
     document.title = location.title;
     history.pushState({ pathname: location.pathname }, location.title, location.pathname)
+    console.log(location)
 })
 
 app.ports.updateTitle.subscribe(function(title) {
     document.title = title;
     history.replaceState(history.state, document.title, document.location.pathname)
+    console.log(title)
 })
 
 window.addEventListener('popstate', function(event) {
+    console.log(event.state)
     app.ports.pathUpdated.send(event.state.pathname)
 })
 

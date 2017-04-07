@@ -4,6 +4,11 @@ import Html exposing (..)
 import Header
 import Interop
 import Types exposing (..)
+import HomePage
+import ServicesPage
+import PortfolioPage
+import BlogPage
+import ContactPage
 
 
 type alias Model =
@@ -17,16 +22,44 @@ model =
     }
 
 
+loadContent : Model -> Html Msg
+loadContent model =
+    case model.location.page of
+        Home ->
+            HomePage.view
+
+        Services ->
+            ServicesPage.view
+
+        Portfolio s ->
+            PortfolioPage.view s
+
+        Blog s ->
+            BlogPage.view s
+
+        Contact ->
+            ContactPage.view
+
+
 view : Model -> Html Msg
 view model =
-    Header.view model.location
+    div []
+        [ Header.view model.location
+        , loadContent model
+        ]
 
 
 update : Msg -> Model -> ( Model, Cmd msg )
 update msg model =
     case msg of
         Navigate loc ->
-            ( { model | location = loc }, Interop.updateLocation loc )
+            let
+                record =
+                    { pathname = loc.pathname
+                    , title = loc.title
+                    }
+            in
+                ( { model | location = loc }, Interop.updateLocation record )
 
         UpdatedPath pathname ->
             let

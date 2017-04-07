@@ -41,7 +41,7 @@ view location =
         header []
             [ div [ class [ LogoWrapper ] ]
                 [ img
-                    [ src "assets/logo-small.jpg"
+                    [ src "/assets/logo-small.jpg"
                     , class [ Clickable ]
                     , onClick (Navigate home)
                     ]

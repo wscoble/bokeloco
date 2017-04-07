@@ -1,9 +1,7 @@
 port module Interop exposing (..)
 
-import Types exposing (..)
 
-
-port updateLocation : Location -> Cmd msg
+port updateLocation : { pathname : String, title : String } -> Cmd msg
 
 
 port pathUpdated : (String -> msg) -> Sub msg

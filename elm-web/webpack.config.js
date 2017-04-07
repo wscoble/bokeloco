@@ -50,18 +50,18 @@ module.exports = {
         historyApiFallback: true
     },
 
-    plugins: [
-        new webpackUglifyJsPlugin({
-            cacheFolder: path.resolve(__dirname, './.cache'),
-            debug: true,
-            minimize: true,
-            sourceMap: false,
-            output: {
-                comments: false
-            },
-            compressor: {
-                warnings: false
-            }
-        })
-    ]
+    // plugins: [
+    //     new webpackUglifyJsPlugin({
+    //         cacheFolder: path.resolve(__dirname, './.cache'),
+    //         debug: true,
+    //         minimize: true,
+    //         sourceMap: false,
+    //         output: {
+    //             comments: false
+    //         },
+    //         compressor: {
+    //             warnings: false
+    //         }
+    //     })
+    // ]
 };
